@@ -2,15 +2,17 @@
 
   <div class="small-12 columns">
     <h3>Title:</h3>
-    <input type="text" value="{{title}}" />
+    <input type="text" value="{{comic.title}}" />
   </div>
 
-  <div id="comic-edit" class="small-12 large-7 columns">
-    {{#each panels}}
-    {{> panelEdit}}
-    {{/each}}
-    <button id="addPanelButton">Add a Panel</button>
+  <div id="comic-edit" class="small-12 columns">
+    <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+      {{#each comic.panels}}
+        {{> panelEdit}}
+      {{/each}}
+    </ul>
+    <p>Browse images below to add a new panel or <a href="/createImage">create a new one</a></p>
   </div>
 
-  {{> imagesView}}
+  {{> imagesView }}
 </template>

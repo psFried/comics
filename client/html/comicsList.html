@@ -1,0 +1,10 @@
+<template name="comicsList">
+
+  {{#each comics}}
+    {{> comicLink}}
+  {{/each}}
+</template>
+
+<template name="comicLink">
+  <a href="/view/{{_id}}">{{title}}</a>
+</template>

@@ -1,0 +1,21 @@
+<template name="comicView">
+  <div class="small-12 columns">
+    <h3>{{title}}</h3>
+  </div>
+
+  <div id="comic-edit" class="small-12 columns">
+    <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+      {{#each comic.panels}}
+        {{> panelView}}
+      {{/each}}
+    </ul>
+  </div>
+
+</template>
+
+<template name="panelView">
+  <li class="panelEdit">
+    <canvas id="panelView{{imgId}}" width="500" height="500"></canvas>
+    <p class="panelCaption">{{panelText}}</p>
+  </li>
+</template>
