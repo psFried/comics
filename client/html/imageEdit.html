@@ -2,12 +2,14 @@
 
   <h3>Edit Image</h3>
 
-  <canvas id="imageEdit" width="500" height="500"></canvas>
-  <input id="description-edit-box" type="text" placeholder="Add a Description to your image" />
-  <br>
-  <button id="save-image" class="save-button">Save Image</button><br>
+  <div class="small-12 large-6 columns">
+    <canvas id="imageEdit" width="500" height="500"></canvas>
+    <br>
+    <input id="description-edit-box" type="text" placeholder="Add a Description to your image" />
+  </div>
 
-  <div>
+  <div class="small-12 large-6 columns">
+    <button id="save-image" class="save-button">Save Image</button><br>
     <button id="drawing-mode" class="btn btn-info">Cancel drawing mode</button><br>
     <button id="clear-canvas" class="btn btn-info">Clear</button><br>
 
@@ -40,8 +42,8 @@
 
       <label for="drawing-shadow-offset">Shadow offset:</label>
       <span class="info">0</span><input type="range" value="0" min="0" max="50" id="drawing-shadow-offset"><br>
-    </div>
-
+  </div>
+  
 </div>
 
 </template>

@@ -33,6 +33,10 @@ Template.imageEdit.onRendered(function() {
 
       var imgId = App.Images.insert(toSave);
       console.log("saved image: %s", imgId);
+
+      if (App.currentEditComic) {
+        window.location.href = "/edit/" + App.currentEditComic._id;
+      }
     }
   };
 

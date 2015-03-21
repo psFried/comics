@@ -7,4 +7,6 @@ Template.panelEdit.onRendered(function(){
   var previewCanvas = new fabric.StaticCanvas('panelEditCanvas' + imgId);
   previewCanvas.loadFromJSON(image.canvas);
   previewCanvas.renderAll();
+
+  
 });
