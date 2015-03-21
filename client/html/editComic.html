@@ -1,13 +1,16 @@
 <template name="editComic">
 
   <div id="comic-edit">
+    <h3>Title:</h3>
+    <input type="text" value="{{title}}" />
+    <br>
     {{#each panels}}
-
       {{> panelEdit}}
-
     {{/each}}
+    <button id="addPanelButton">Add a Panel</button>
   </div>
+
   <div id="imageList">
-    
+    {{> imagesView}}
   </div>
 </template>
