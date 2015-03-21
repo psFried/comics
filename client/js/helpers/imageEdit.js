@@ -17,13 +17,16 @@ Template.imageEdit.onRendered(function() {
       drawingShadowWidth = $('drawing-shadow-width'),
       drawingShadowOffset = $('drawing-shadow-offset'),
       clearEl = $('clear-canvas'),
-      saveBtnEl = $('save-image');
+      saveBtnEl = $('save-image'),
+      descriptionTextBox = $('description-edit-box');
+
 
   saveBtnEl.onclick = function() {
     console.log("save called");
     var img = App.currentEditingImage;
     if (img) {
       var toSave = {
+        description: descriptionTextBox.value,
         user: Meteor.userId(),
         canvas: img.toObject()
       }
