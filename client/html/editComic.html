@@ -1,16 +1,16 @@
 <template name="editComic">
 
-  <div id="comic-edit">
+  <div class="small-12 columns">
     <h3>Title:</h3>
     <input type="text" value="{{title}}" />
-    <br>
+  </div>
+
+  <div id="comic-edit" class="small-12 large-7 columns">
     {{#each panels}}
-      {{> panelEdit}}
+    {{> panelEdit}}
     {{/each}}
     <button id="addPanelButton">Add a Panel</button>
   </div>
 
-  <div id="imageList">
-    {{> imagesView}}
-  </div>
+  {{> imagesView}}
 </template>
