@@ -16,7 +16,22 @@ Template.imageEdit.onRendered(function() {
       drawingLineWidthEl = $('drawing-line-width'),
       drawingShadowWidth = $('drawing-shadow-width'),
       drawingShadowOffset = $('drawing-shadow-offset'),
-      clearEl = $('clear-canvas');
+      clearEl = $('clear-canvas'),
+      saveBtnEl = $('save-image');
+
+  saveBtnEl.onclick = function() {
+    console.log("save called");
+    var img = App.currentEditingImage;
+    if (img) {
+      var toSave = {
+        user: Meteor.userId(),
+        canvas: img.toObject()
+      }
+
+      var imgId = App.Images.insert(toSave);
+      console.log("saved image: %s", imgId);
+    }
+  };
 
   clearEl.onclick = function() { canvas.clear() };
 
